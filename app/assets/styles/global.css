@@ -141,5 +141,9 @@
 }
 
 .gradient-primary {
+  @apply bg-[linear-gradient(90deg,_#F63450_0%,_#D22737_100%)];
+}
+
+.gradient-secondary {
   @apply bg-[linear-gradient(89.53deg,_#8046e9_0.33%,_#5c20c4_94.75%)];
 }
