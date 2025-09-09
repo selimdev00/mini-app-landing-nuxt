@@ -1,3 +1,5 @@
 <template>
-  <h1>hello world!</h1>
+  <div class="">
+    <ui-button>Hello world!</ui-button>
+  </div>
 </template>
