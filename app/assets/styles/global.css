@@ -16,6 +16,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-third: var(--third);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
@@ -87,6 +88,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   --text-gray: #b0b0b0;
+  --third: #2f2f2f;
 }
 
 /* dark mode (not used) */
