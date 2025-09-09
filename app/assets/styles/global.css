@@ -137,3 +137,7 @@
 .container {
   @apply max-w-[var(--spacing-container)] mx-auto;
 }
+
+.gradient-primary {
+  @apply bg-[linear-gradient(89.53deg,_#8046e9_0.33%,_#5c20c4_94.75%)];
+}

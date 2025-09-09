@@ -28,7 +28,7 @@ const links = [
 </script>
 
 <template>
-  <header class="fixed top-0 w-full">
+  <header class="fixed top-0 w-full z-10">
     <div class="container flex justify-between items-center py-6">
       <Logo />
 
