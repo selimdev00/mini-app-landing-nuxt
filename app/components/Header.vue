@@ -28,14 +28,16 @@ const links = [
 </script>
 
 <template>
-  <header>
+  <header class="fixed top-0 w-full">
     <div class="container flex justify-between items-center py-6">
       <Logo />
 
       <div class="flex items-center gap-6">
         <ul class="flex gap-[22px]">
           <li v-for="(item, index) in links" :key="item.title">
-            <nuxt-link :to="item.href">{{ item.title }}</nuxt-link>
+            <nuxt-link :to="item.href" class="text-[18px]">{{
+              item.title
+            }}</nuxt-link>
           </li>
         </ul>
 
