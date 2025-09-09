@@ -8,4 +8,6 @@
   <sections-catalog />
 
   <sections-banner />
+
+  <sections-connect-now />
 </template>
