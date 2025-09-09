@@ -6,4 +6,6 @@
   <sections-third />
 
   <sections-catalog />
+
+  <sections-banner />
 </template>
