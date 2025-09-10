@@ -10,4 +10,6 @@
   <sections-banner />
 
   <sections-connect-now />
+
+  <sections-subscriptions />
 </template>

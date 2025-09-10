@@ -38,7 +38,7 @@ const items = [
           :key="item.title"
           class="flex items-center bg-third p-4 rounded-[12px] gap-[12px]"
         >
-          <icon-checked />
+          <icon-checked class="text-purple" />
 
           <p class="text-xl font-medium">{{ item.title }}</p>
         </div>

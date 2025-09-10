@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="16" height="16" rx="8" fill="#8249EB" />
+    <rect width="16" height="16" rx="8" fill="currentColor" />
     <path
       d="M11.3337 5.5L6.75033 10.0833L4.66699 8"
       stroke="white"

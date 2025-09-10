@@ -45,6 +45,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --color-text-gray: var(--text-gray);
+  --color-purple: var(--purple);
 
   --font-jost: "Jost", sans-serif;
   --font-unbounded: "Unbounded", sans-serif;
@@ -89,6 +90,7 @@
 
   --text-gray: #b0b0b0;
   --third: #2f2f2f;
+  --purple: #8249eb;
 }
 
 /* dark mode (not used) */
