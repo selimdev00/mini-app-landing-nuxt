@@ -12,4 +12,6 @@
   <sections-connect-now />
 
   <sections-subscriptions />
+
+  <sections-qa />
 </template>
