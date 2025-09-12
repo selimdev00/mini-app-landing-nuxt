@@ -1,0 +1,11 @@
+services:
+  mini-app-landing:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: mini-app-landing
+    ports:
+      - "4005:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
