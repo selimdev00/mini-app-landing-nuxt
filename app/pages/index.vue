@@ -1,17 +1,19 @@
 <template>
-  <sections-hero />
+  <div class="overflow-x-hidden">
+    <sections-hero />
 
-  <sections-second />
+    <sections-second />
 
-  <sections-third />
+    <sections-third />
 
-  <sections-catalog />
+    <sections-catalog />
 
-  <sections-banner />
+    <sections-banner />
 
-  <sections-connect-now />
+    <sections-connect-now />
 
-  <sections-subscriptions />
+    <sections-subscriptions />
 
-  <sections-qa />
+    <sections-qa />
+  </div>
 </template>

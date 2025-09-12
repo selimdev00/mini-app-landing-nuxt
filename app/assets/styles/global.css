@@ -50,7 +50,7 @@
   --font-jost: "Jost", sans-serif;
   --font-unbounded: "Unbounded", sans-serif;
 
-  --spacing-container: 1360px;
+  --spacing-container: 1392px;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
 
@@ -159,7 +159,7 @@
 }
 
 .container {
-  @apply max-w-[var(--spacing-container)] mx-auto;
+  @apply max-w-[var(--spacing-container)] mx-auto px-4;
 }
 
 .gradient-primary {

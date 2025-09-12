@@ -16,19 +16,19 @@ const items = [
 </script>
 
 <template>
-  <div class="container mt-[200px]">
+  <div class="container mt-[100px]">
     <div class="text-center max-w-[923px] mx-auto space-y-6">
-      <h1 class="font-unbounded text-[36px] font-medium">
+      <h1 class="font-unbounded md:text-[36px] text-lg font-medium">
         Подключите Mini App сейчас  и получите преимущество в своей нише
       </h1>
 
-      <p class="text-text-gray text-2xl">
+      <p class="text-text-gray md:text-2xl text-sm">
         от блогеров и экспертов до онлайн школ и магазинов
       </p>
     </div>
 
     <div class="flex justify-center gap-[46px] items-center mt-[60px]">
-      <div>
+      <div class="md:block hidden">
         <img src="@/assets/images/connect-now.png" alt="" />
       </div>
 

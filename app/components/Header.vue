@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useWindowScroll } from "@vueuse/core";
+
 const links = [
   {
     title: "Возможности",
@@ -25,15 +27,25 @@ const links = [
     href: "#",
   },
 ];
+
+const mobileMenu = ref(false);
+
+const { y } = useWindowScroll();
 </script>
 
 <template>
-  <header class="fixed top-0 w-full z-10">
+  <header
+    class="fixed top-0 w-full z-20 transition-colors"
+    :class="{
+      'bg-background': y > 100,
+      'bg-transparent': y < 100,
+    }"
+  >
     <div class="container flex justify-between items-center py-6">
       <Logo />
 
       <div class="flex items-center gap-6">
-        <ul class="flex gap-[22px]">
+        <ul class="xl:flex hidden gap-[22px]">
           <li v-for="(item, index) in links" :key="item.title">
             <nuxt-link :to="item.href" class="text-[18px]">{{
               item.title
@@ -41,25 +53,52 @@ const links = [
           </li>
         </ul>
 
-        <ui-button variant="secondary">
-          <svg
-            width="25"
-            height="20"
-            viewBox="0 0 25 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <div class="flex gap-2">
+          <ui-button
+            class="xl:hidden block"
+            variant="secondary"
+            @click="mobileMenu = true"
           >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M1.71862 8.60987C8.42949 5.78741 12.9045 3.92667 15.1435 3.02765C21.5365 0.460774 22.8649 0.0148807 23.7307 0.000156987C23.9212 -0.00308132 24.347 0.0424773 24.6228 0.25852C24.8557 0.440943 24.9197 0.687369 24.9504 0.860326C24.9811 1.03328 25.0192 1.42728 24.9889 1.73514C24.6424 5.249 23.1434 13.7762 22.3808 17.7118C22.0581 19.3771 21.4227 19.9354 20.8076 19.9901C19.4707 20.1088 18.4556 19.1372 17.1608 18.3179C15.1348 17.0358 13.9901 16.2377 12.0235 14.9867C9.75066 13.5408 11.224 12.7462 12.5193 11.4475C12.8583 11.1076 18.7484 5.93584 18.8624 5.46668C18.8767 5.40801 18.8899 5.18929 18.7553 5.0738C18.6207 4.95831 18.422 4.9978 18.2787 5.02921C18.0754 5.07373 14.8388 7.1389 8.56858 11.2247C7.64986 11.8337 6.8177 12.1304 6.07212 12.1149C5.25018 12.0977 3.6691 11.6663 2.49372 11.2974C1.05207 10.8451 -0.0937162 10.6059 0.00605648 9.83761C0.0580243 9.43745 0.628878 9.0282 1.71862 8.60987Z"
-              fill="white"
-            />
-          </svg>
+            <icon-hamburger class="text-xl" />
+          </ui-button>
 
-          Открыть в Телеграм
-        </ui-button>
+          <ui-button
+            variant="secondary"
+            as="a"
+            href="https://t.me/marsakod_bot/app?startapp=ref-landingcap"
+            target="_blank"
+          >
+            <icon-telegram class="text-xl" />
+
+            <span class="hidden md:block">Открыть в Телеграм</span>
+          </ui-button>
+        </div>
       </div>
     </div>
   </header>
+
+  <transition-slide>
+    <div
+      class="md:hidden block fixed top-0 right-0 w-full h-full bg-background max-w-[260px] z-20"
+      v-if="mobileMenu"
+    >
+      <div class="p-4 flex flex-col gap-12 items-end">
+        <div class="flex justify-end">
+          <ui-button variant="secondary" @click="mobileMenu = false">
+            <icon-x class="text-2xl" />
+          </ui-button>
+        </div>
+
+        <Logo />
+
+        <ul class="flex flex-col gap-[22px] text-right">
+          <li v-for="(item, index) in links" :key="item.title">
+            <nuxt-link :to="item.href" class="text-[18px]"
+              >{{ item.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </transition-slide>
 </template>

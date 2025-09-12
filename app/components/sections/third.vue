@@ -36,19 +36,21 @@ const sections = [
 </script>
 
 <template>
-  <div class="container mt-[200px]">
-    <div class="text-center max-w-[787px] mx-auto space-y-6">
-      <h1 class="font-unbounded text-[36px] font-medium">
+  <div class="container mt-[100px]">
+    <div class="text-center max-w-[787px] mx-auto md:space-y-6 space-y-4">
+      <h1 class="font-unbounded md:text-[36px] text-lg font-medium">
         Зачем вам навигация внутри канала?
       </h1>
 
-      <p class="text-text-gray text-2xl">
+      <p class="text-text-gray md:text-2xl text-sm">
         Раньше такое могли позволить себе только крупные компании.  Мы сделали
         это доступным.
       </p>
     </div>
 
-    <div class="grid grid-cols-3 gap-[14px] mt-[60px]">
+    <div
+      class="grid xl:grid-cols-3 lg:grid-cols-2 gap-[14px] md:mt-[60px] mt-5"
+    >
       <div
         v-for="(item, index) in sections"
         :key="item.title"

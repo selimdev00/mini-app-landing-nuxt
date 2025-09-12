@@ -1,8 +1,8 @@
 <template>
   <footer>
-    <div class="container border-t mt-[200px] pt-10 pb-20">
-      <div class="grid grid-cols-[2fr_1fr] gap-[224px] text-lg">
-        <div class="text-text-gray space-y-4">
+    <div class="container border-t mt-[100px] pt-10 pb-20">
+      <div class="grid lg:grid-cols-[2fr_1fr] lg:gap-[224px] gap-4 text-lg">
+        <div class="text-text-gray space-y-4 lg:order-1 order-2">
           <Logo />
 
           <p>© 2024. Все права защищены</p>
@@ -21,7 +21,7 @@
           </p>
         </div>
 
-        <div class="space-y-10">
+        <div class="space-y-10 lg:order-2 order-1">
           <h4 class="text-text-gray">Контакты</h4>
 
           <ul class="space-y-4">
@@ -33,7 +33,7 @@
           <div class="flex gap-[12px]">
             <ui-button variant="secondary">
               <icon-telegram />
-              Подпишитесь на нас в телеграм
+              <span class="lg:block hidden">Подпишитесь на нас в телеграм</span>
             </ui-button>
 
             <ui-button variant="secondary">
