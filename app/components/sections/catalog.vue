@@ -31,7 +31,7 @@ const nav = [
 </script>
 
 <template>
-  <div class="container mt-[100px]">
+  <div id="how-works" class="container pt-[100px]">
     <div class="text-center max-w-[794px] mx-auto space-y-6">
       <h1 class="font-unbounded md:text-[36px] text-lg font-medium">
         Мы сделали навигацию по каналу проще и удобнее
@@ -57,19 +57,21 @@ const nav = [
       </button>
     </div>
 
-    <ui-carousel class="relative w-full mt-15">
-      <ui-carousel-content>
-        <ui-carousel-item
-          v-for="item in 6"
-          :key="item"
-          class="basis-1/2 xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 flex items-center justify-center"
-        >
-          <img :src="catalogImage" alt="" />
-        </ui-carousel-item>
-      </ui-carousel-content>
+    <div class="mt-15">
+      <ui-carousel class="relative w-full">
+        <ui-carousel-content>
+          <ui-carousel-item
+            v-for="item in 6"
+            :key="item"
+            class="basis-1/2 xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 flex items-center justify-center"
+          >
+            <img :src="catalogImage" alt="" />
+          </ui-carousel-item>
+        </ui-carousel-content>
 
-      <ui-carousel-previous></ui-carousel-previous>
-      <ui-carousel-next></ui-carousel-next>
-    </ui-carousel>
+        <ui-carousel-previous></ui-carousel-previous>
+        <ui-carousel-next></ui-carousel-next>
+      </ui-carousel>
+    </div>
   </div>
 </template>

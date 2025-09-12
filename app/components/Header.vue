@@ -3,28 +3,28 @@ import { useWindowScroll } from "@vueuse/core";
 
 const links = [
   {
-    title: "Возможности",
-    href: "#",
+    title: "Для кого",
+    href: "#for",
   },
   {
-    title: "Для кого",
-    href: "#",
+    title: "Возможности",
+    href: "#possibilites",
   },
   {
     title: "Как работает",
-    href: "#",
+    href: "#how-works",
   },
   {
     title: "Подписка",
-    href: "#",
+    href: "#subscription",
   },
   {
     title: "Вопросы",
-    href: "#",
+    href: "#qa",
   },
   {
     title: "Поддержка",
-    href: "#",
+    href: "#qa",
   },
 ];
 

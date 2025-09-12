@@ -1,5 +1,5 @@
 <template>
-  <div class="container 2xl:mt-0 mt-[100px]">
+  <div id="for" class="container 2xl:mt-0 pt-[100px]">
     <div class="text-center max-w-[1048px] mx-auto space-y-6">
       <h1 class="font-unbounded md:text-[36px] text-lg font-medium">
         MiniApp — как новый “сайт”, только в Telegram

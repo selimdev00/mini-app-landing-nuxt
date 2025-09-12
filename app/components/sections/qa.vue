@@ -41,7 +41,8 @@ const questions = [
 
 <template>
   <div
-    class="container flex lg:flex-nowrap flex-wrap mt-[100px] lg:gap-[125px] gap-5"
+    id="qa"
+    class="container flex lg:flex-nowrap flex-wrap pt-[100px] lg:gap-[125px] gap-5"
   >
     <div class="space-y-10 lg:min-w-[421px] w-full lg:order-1 order-2">
       <h3 class="font-unbounded text-[32px] font-medium lg:block hidden">

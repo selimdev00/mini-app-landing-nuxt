@@ -36,7 +36,7 @@ const sections = [
 </script>
 
 <template>
-  <div class="container mt-[100px]">
+  <div id="possibilites" class="container pt-[100px]">
     <div class="text-center max-w-[787px] mx-auto md:space-y-6 space-y-4">
       <h1 class="font-unbounded md:text-[36px] text-lg font-medium">
         Зачем вам навигация внутри канала?

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container mt-[100px]">
+  <div id="subscription" class="container pt-[100px]">
     <div class="text-center max-w-[1122px] mx-auto md:space-y-6 space-y-4">
       <h1 class="font-unbounded md:text-[32px] text-lg font-medium">
         Подписка с возможностью помощи в настройке, а еще и на связи 24/7

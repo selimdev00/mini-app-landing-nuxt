@@ -25,18 +25,33 @@
           <h4 class="text-text-gray">Контакты</h4>
 
           <ul class="space-y-4">
-            <li class="flex gap-[12px]"><icon-phone />8 (800) 200-17-22</li>
+            <li>
+              <a class="flex gap-[12px]" href="tel:8 (800) 200-17-22">
+                <icon-phone />8 (800) 200-17-22
+              </a>
+            </li>
 
-            <li class="flex gap-[12px]"><icon-mail /> info@marsakod.app</li>
+            <li>
+              <a class="flex gap-[12px]" href="mailto:info@marsakod.app">
+                <icon-mail />
+
+                info@marsakod.app</a
+              >
+            </li>
           </ul>
 
           <div class="flex gap-[12px]">
-            <ui-button variant="secondary">
+            <ui-button
+              variant="secondary"
+              as="a"
+              href="https://t.me/marsakod_bot/app?startapp=ref-landingcap"
+              target="_blank"
+            >
               <icon-telegram />
               <span class="lg:block hidden">Подпишитесь на нас в телеграм</span>
             </ui-button>
 
-            <ui-button variant="secondary">
+            <ui-button as="a" href="#" target="_blank" variant="secondary">
               <icon-vk class="text-2xl" />
             </ui-button>
           </div>
@@ -45,3 +60,4 @@
     </div>
   </footer>
 </template>
+<script setup lang="ts"></script>
