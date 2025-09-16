@@ -24,7 +24,7 @@
 
         <div class="flex items-center gap-4">
           <div class="shrink-0">
-            <icon-telegram />
+            <icon-telegram class="text-[25px]" />
           </div>
 
           <p class="text-sm">

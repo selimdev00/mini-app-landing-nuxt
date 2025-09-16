@@ -68,7 +68,7 @@ const { y } = useWindowScroll();
             href="https://t.me/marsakod_bot/app?startapp=ref-landingcap"
             target="_blank"
           >
-            <icon-telegram class="text-xl" />
+            <icon-telegram class="text-[25px]" />
 
             <span class="hidden md:block">Открыть в Телеграм</span>
           </ui-button>

@@ -1,33 +1,138 @@
 <script setup lang="ts">
-import catalogImage from "@/assets/images/catalog-image.png";
+import { onMounted } from "vue";
 
-const activeNav = ref(0);
+const activeNav = ref();
+
+onMounted(() => {
+  activeNav.value = 0;
+});
 
 const nav = [
   {
     title: "Навигация по каналу",
     items: [
       {
-        image: catalogImage,
+        image: new URL(
+          "@/assets/images/projects/navigation/1.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/navigation/2.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/navigation/3.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/navigation/4.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/navigation/5.png",
+          import.meta.url,
+        ).href,
       },
     ],
   },
   {
     title: "Онбординг",
+    items: [
+      {
+        image: new URL(
+          "@/assets/images/projects/onboarding/1.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/onboarding/2.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/onboarding/3.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/onboarding/4.png",
+          import.meta.url,
+        ).href,
+      },
+      {
+        image: new URL(
+          "@/assets/images/projects/onboarding/5.png",
+          import.meta.url,
+        ).href,
+      },
+    ],
   },
   {
     title: "Магазин",
+    items: [
+      {
+        image: new URL("@/assets/images/projects/store/1.png", import.meta.url)
+          .href,
+      },
+      {
+        image: new URL("@/assets/images/projects/store/2.png", import.meta.url)
+          .href,
+      },
+      {
+        image: new URL("@/assets/images/projects/store/3.png", import.meta.url)
+          .href,
+      },
+      {
+        image: new URL("@/assets/images/projects/store/4.png", import.meta.url)
+          .href,
+      },
+      {
+        image: new URL("@/assets/images/projects/store/5.png", import.meta.url)
+          .href,
+      },
+    ],
   },
   {
     title: "Настройки",
   },
   {
-    title: "Внутрение страницы",
+    title: "Внутренние страницы",
+    items: [
+      {
+        image: new URL("@/assets/images/projects/inner/1.png", import.meta.url)
+          .href,
+      },
+      {
+        image: new URL("@/assets/images/projects/inner/2.png", import.meta.url)
+          .href,
+      },
+      {
+        image: new URL("@/assets/images/projects/inner/3.png", import.meta.url)
+          .href,
+      },
+      {
+        image: new URL("@/assets/images/projects/inner/4.png", import.meta.url)
+          .href,
+      },
+    ],
   },
   {
     title: "Мероприятия",
   },
 ];
+
+const activeItem = computed(() => nav[activeNav.value]);
 </script>
 
 <template>
@@ -57,15 +162,15 @@ const nav = [
       </button>
     </div>
 
-    <div class="mt-15">
+    <div v-if="activeItem" class="mt-15">
       <ui-carousel class="relative w-full">
         <ui-carousel-content>
           <ui-carousel-item
-            v-for="item in 6"
-            :key="item"
+            v-for="(item, index) in activeItem.items ?? []"
+            :key="index"
             class="basis-1/2 xs:basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 flex items-center justify-center"
           >
-            <img :src="catalogImage" alt="" />
+            <img :src="item.image" alt="" />
           </ui-carousel-item>
         </ui-carousel-content>
 

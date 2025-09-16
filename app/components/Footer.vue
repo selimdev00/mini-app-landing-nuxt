@@ -3,7 +3,7 @@
     <div class="container border-t mt-[100px] pt-10 pb-20">
       <div class="grid lg:grid-cols-[2fr_1fr] lg:gap-[224px] gap-4 text-lg">
         <div class="text-text-gray space-y-4 lg:order-1 order-2">
-          <Logo />
+          <Logo class="lg:block hidden" />
 
           <p>© 2024. Все права защищены</p>
 
@@ -21,7 +21,9 @@
           </p>
         </div>
 
-        <div class="space-y-10 lg:order-2 order-1">
+        <div class="lg:space-y-10 space-y-4 lg:order-2 order-1">
+          <Logo class="lg:hidden block" />
+
           <h4 class="text-text-gray">Контакты</h4>
 
           <ul class="space-y-4">
@@ -47,12 +49,8 @@
               href="https://t.me/marsakod_bot/app?startapp=ref-landingcap"
               target="_blank"
             >
-              <icon-telegram />
+              <icon-telegram class="text-[25px]" />
               <span class="lg:block hidden">Подпишитесь на нас в телеграм</span>
-            </ui-button>
-
-            <ui-button as="a" href="#" target="_blank" variant="secondary">
-              <icon-vk class="text-2xl" />
             </ui-button>
           </div>
         </div>

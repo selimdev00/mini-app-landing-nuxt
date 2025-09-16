@@ -29,7 +29,7 @@
           <img
             src="@/assets/images/landing-mobile.png"
             alt=""
-            class="max-w-[200%] w-[110%] relative right-4 2xl:hidden block"
+            class="max-w-[200%] w-[110%] relative right-4 2xl:hidden md:hidden block"
           />
 
           <div
@@ -40,7 +40,7 @@
               target="_blank"
             >
               <ui-button>
-                <icon-telegram />
+                <icon-telegram class="text-[25px]" />
 
                 Открыть в Телеграм
               </ui-button>

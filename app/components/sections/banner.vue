@@ -9,7 +9,7 @@
             Разработка Mini App в вашем стиле от опытной команды специалистов
           </h1>
 
-          <p class="text-text-gray md:text-xl text-sm">
+          <p class="text-[#e1d5f6] md:text-xl text-sm">
             Любые индивидуальные решения и кастомизацией любой сложности, от
             интеграции с CRM и AI-инструментами, до любых желаемых модулей
             (рандом-кофе, тиндер, форум, и т.д.).
@@ -21,7 +21,7 @@
             class="lg:hidden block w-full"
           >
             <ui-button class="w-full">
-              <icon-telegram />
+              <icon-telegram class="text-[25px]" />
               Написать в телеграм
             </ui-button>
           </a>
